@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.header {
+  height: 10%;
+  width: 100%;
+  background-color: #54461a;
+  position: absolute;
+}
+
+.splash-wrapper {
+  display: table;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ffea91;
+}
+
+#logo-eXpen {
+  position: absolute;
+  display: inline;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 800px;
+  height: 200px;
+  vertical-align: text-top;
+  text-align: center;
+  justify-content: center;
+}
+
+#naziv-eXpen {
+  display:inline-table;
+  float: right;
+  vertical-align: middle;
+}
+#naziv-eXpen p {
+  font-size: 140pt;
+  line-height: 140px;
+  font-family: 'Quicksand';
+  color: #54461a;
+  text-shadow: 8px 8px 6px #ffd217;
+}
+
+#naziv-eXpen-span {
+  color: #ffd217;
+  font-weight: bold;
+  font-size: 170pt;
+  text-shadow: 10px 10px 6px #7d6d2c
+}
+
+#horizontal-line {
+  height: 5px;
+  background-color: #54461a;
+  margin-left: 20px;
+  box-shadow: 4px 4px 10px #ffd217;
+}
