@@ -1,0 +1,24 @@
+{
+  "name": "expen",
+  "version": "1.0.0",
+  "description": "Node.js projekat za expen aplikaciju",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imranspahic/eXpen-nodejs.git"
+  },
+  "keywords": [
+    "expen",
+    "server",
+    "nodejs"
+  ],
+  "author": "Imran Spahić",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imranspahic/eXpen-nodejs/issues"
+  },
+  "homepage": "https://github.com/imranspahic/eXpen-nodejs#readme"
+}
