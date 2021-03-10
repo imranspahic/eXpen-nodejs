@@ -1,12 +1,15 @@
 const express = require('express');
 
-const path = require('path');
+const router = express.Router();
 
-const route = express.Router();
+const loginController = require('../controllers/login');
 
-route.get('/', (req, res, next) => {
-    console.log("Get requested");
- res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
-});
+router.get('/', loginController.getLogin);
 
-module.exports = route;
+router.post('/login-dashboard', loginController.postLoginDashboard);
+
+router.get('/dashboard', loginController.getLoginDashboard);
+
+router.post('/logout-dashboard', loginController.postLogoutDashboard);
+
+module.exports = router;

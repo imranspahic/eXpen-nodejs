@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/splash.css">
     <script src="https://kit.fontawesome.com/6f18e1fdff.js" crossorigin="anonymous"></script>
-    <title>eXpen</title>
-    <script src="main.js"></script>
+    <title><%= pageTitle %></title>
+    <script src="/js/main.js"></script>
   </head>
   <body onload="funkcija()">
     <header id="header">
@@ -15,7 +15,7 @@
       </div>
     
       <div id="header-slika">
-        <img src="/css/logo_coin.png" alt="Logo">
+        <img src="/images/logo_coin.png" alt="Logo">
       </div>
       <div id="header-naziv">
           <p>e<span>X</span>pen</p>
@@ -25,13 +25,11 @@
         <p id="preuzmi-aplikaciju" <span id="google-play-icon"><i class="fab fa-google-play"></i></span>  Preuzmi aplikaciju</p>
       </div>
 
-
-
     </header>
 
     <div id="loading-spinner">
       <div class="logo_coin">
-        <img src="/css/logo_coin.png" alt="Logo" id="logo_center">
+        <img src="/images/logo_coin.png" alt="Logo" id="logo_center">
       </div>
     <div id="c1"> </div>
     <div id="c2"> </div>
@@ -41,8 +39,8 @@
 
     <main>
 
-      <form class="login-form" action="index.html" method="post" id="login-form">
-        <img src="/css/user-logo.png" alt="User" id="user-logo">
+      <form class="login-form" action="/login-dashboard" method="post" id="login-form">
+        <img src="/images/user-logo.png" alt="User" id="user-logo">
 
               <div class="username-input">
                 <input type="text" name="Korisnički račun" value="" placeholder="Korisnički račun">
@@ -62,7 +60,7 @@
         <!-- HEADER GRID -->
           <div class="paHEADER">
               <div class="paHEADER-logo">
-                  <img src="/css/logo_coin.png" alt="Logo">
+                  <img src="/images/logo_coin.png" alt="Logo">
               </div>
 
               <div class="paHEADER-naziv">
@@ -96,46 +94,46 @@
 
           <div class="paMAIN-screenshots">
             <div id='img1'>
-              <img src="/css/s1.png" alt="">
+              <img src="/images/s1.png" alt="">
             </div>
             <div id='img2'>
-              <img src="/css/s2.png" alt="">
+              <img src="/images/s2.png" alt="">
             </div>
             <div id='img3'>
-              <img src="/css/s3.png" alt="">
+              <img src="/images/s3.png" alt="">
             </div>
             <div id='img4'>
-              <img src="/css/s4.png" alt="">
+              <img src="/images/s4.png" alt="">
             </div>
             <div id='img5'>
-              <img src="/css/s5.png" alt="">
+              <img src="/images/s5.png" alt="">
             </div>
             <div id='img6'>
-              <img src="/css/s6.png" alt="">
+              <img src="/images/s6.png" alt="">
             </div>
             <div id='img7'>
-              <img src="/css/s7.png" alt="">
+              <img src="/images/s7.png" alt="">
             </div>
             <div id='img8'>
-              <img src="/css/s8.png" alt="">
+              <img src="/images/s8.png" alt="">
             </div>
             <div id='img1'>
-              <img src="/css/s1.png" alt="">
+              <img src="/images/s1.png" alt="">
             </div>
             <div id='img2'>
-              <img src="/css/s2.png" alt="">
+              <img src="/images/s2.png" alt="">
             </div>
             <div id='img3'>
-              <img src="/css/s3.png" alt="">
+              <img src="/images/s3.png" alt="">
             </div>
             <div id='img4'>
-              <img src="/css/s4.png" alt="">
+              <img src="/images/s4.png" alt="">
             </div>
             <div id='img5'>
-              <img src="/css/s5.png" alt="">
+              <img src="/images/s5.png" alt="">
             </div>
             <div id='img6'>
-              <img src="/css/s6.png" alt="">
+              <img src="/images/s6.png" alt="">
             </div>
           </div>
 
@@ -221,7 +219,7 @@
 
     function setPocetni() {
 
-      header.style.display = 'block';
+      header.style.display = 'flex';
       header.style.animation = 'fadeIn 2s 1';
       c3.style.animation = 'splash-horizontal 1.3s 1';
       logo_center.style.animation = 'logo_move 1s 1';

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/dashboard-sidebar.css">
+    <link rel="stylesheet" href="/css/dashboard-main.css">
+    <link rel="stylesheet" href="/css/scrollbar.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="main-grid">
+        <section class="navigation-sidebar">
+
+            <div class="expenBrand">
+                <img src="/images/logo_coin.png" alt="Logo">
+                <p>e<span>X</span>pen</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="highlighted-data">
+                <p>Potrošnja:</p>
+                <p class="hihglighted-money">135,00 KM</p>
+            </div>
+
+            <div class="main-menu">
+                <div class="main-menu-category">
+                    <i class="fa fa-credit-card category-name" aria-hidden="true"></i>
+                    <p>Prihod</p>
+                </div>
+                <div class="main-menu-category">
+                    <i class="fa fa-flag category-name" aria-hidden="true"></i>
+                    <p class="category-name">Rashod</p>
+                </div>
+                <div class="main-menu-category">
+                    <i class="fa fa-info-circle category-name" aria-hidden="true"></i>
+                    <p class="category-name">Detalji</p>
+                </div>
+                <div class="main-menu-category">
+                    <i class="fa fa-book category-name" aria-hidden="true"></i>
+                    <p class="category-name">Bilješke</p>
+                </div>
+                <div class="main-menu-category">
+                    <i class="fa fa-bell category-name" aria-hidden="true"></i>
+                    <p class="category-name">Obavijesti</p>
+                </div>
+
+                <div class="main-menu-category">
+                    <i class="fa fa-cog category-name" aria-hidden="true"></i>
+                    <p class="category-name">Postavke</p>
+                </div>
+                <div class="main-menu-category">
+                    <i class="fa fa-wrench category-name" aria-hidden="true"></i>
+                    <p class="category-name">Ažuriranje</p>
+                </div>
+            </div>
+
+            <div class="profile-logo">
+                <img src="/images/semir-logo.jpg" alt="Profile logo">
+            </div>
+
+            <div class="profile-name">
+                <p>Semir Spahić</p>
+            </div>
+
+            <form action="/logout-dashboard" method="post">
+                <button class="profile-logout" type="submit"> ODJAVA </button>
+            </form>
+
+        </section>
+
+        <div class="information-header">
+
+            <!-- <div class="information-header-date">
+                <p>Datum: 25.2.2021</p>
+                <p>Vrijeme: 23:56</p>
+            </div> -->
+
+            <div class="information-header-category">
+                <p>Broj kategorija: </p>
+                <p class="info-number">16</p>
+            </div>
+
+
+            <button class="add-category"> <i class="fa fa-plus category-name" aria-hidden="true"></i>DODAJ
+                KATEGORIJU</button>
+        </div>
+
+        <main class="dashboard-main">
+
+            <div class="category">
+                <img src="https://hzbmotors.com/wp-content/uploads/2020/05/SONATA-hero-option1-764A5360-edit.jpg"
+                    alt="Category">
+                <div class="main-category-name">
+                    <p>Auto</p>
+                </div>
+                <div class="main-category-settings">
+                    <div class="settings-options">
+                        <i class="fa fa-folder settings-icon" id="settings-icon-folder" aria-hidden="true"></i>
+                        <p id="settings-icon-folder-p">Potkategorije</p>
+                    </div>
+
+                    <div class="settings-divider"></div>
+                    <div class="settings-options">
+                        <i class="fa fa-check-square-o" id="settings-icon-transaction" aria-hidden="true"></i>
+                        <p id="settings-icon-transaction-p">Potrošnje</p>
+                    </div>
+                    <div class="settings-divider"></div>
+
+                    <div class="settings">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="category">
+                <img src="http://www.sarajevotimes.com/wp-content/uploads/2020/08/prefabricated-house.jpg"
+                    alt="Category">
+                <div class="main-category-name">
+                    <p>Kuća</p>
+                </div>
+                <div class="main-category-settings">
+                    <div class="settings-options">
+                        <i class="fa fa-folder settings-icon" id="settings-icon-folder" aria-hidden="true"></i>
+                        <p id="settings-icon-folder-p">Potkategorije</p>
+                    </div>
+
+                    <div class="settings-divider"></div>
+                    <div class="settings-options">
+                        <i class="fa fa-check-square-o" id="settings-icon-transaction" aria-hidden="true"></i>
+                        <p id="settings-icon-transaction-p">Potrošnje</p>
+                    </div>
+                    <div class="settings-divider"></div>
+
+                    <div class="settings">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="category">
+                <img src="https://www.shannonspringshotel.com/wp-content/uploads/2020/06/shopping-shannon-springs-2.jpg"
+                    alt="Category">
+                <div class="main-category-name">
+                    <p>Kupovina</p>
+                </div>
+                <div class="main-category-settings">
+                    <div class="settings-options">
+                        <i class="fa fa-folder settings-icon" id="settings-icon-folder" aria-hidden="true"></i>
+                        <p id="settings-icon-folder-p">Potkategorije</p>
+                    </div>
+
+                    <div class="settings-divider"></div>
+                    <div class="settings-options">
+                        <i class="fa fa-check-square-o" id="settings-icon-transaction" aria-hidden="true"></i>
+                        <p id="settings-icon-transaction-p">Potrošnje</p>
+                    </div>
+                    <div class="settings-divider"></div>
+
+                    <div class="settings">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <img src="https://www.shannonspringshotel.com/wp-content/uploads/2020/06/shopping-shannon-springs-2.jpg"
+                    alt="Category">
+                <div class="main-category-name">
+                    <p>Kupovina</p>
+                </div>
+                <div class="main-category-settings">
+                    <div class="settings-options">
+                        <i class="fa fa-folder settings-icon" id="settings-icon-folder" aria-hidden="true"></i>
+                        <p id="settings-icon-folder-p">Potkategorije</p>
+                    </div>
+
+                    <div class="settings-divider"></div>
+                    <div class="settings-options">
+                        <i class="fa fa-check-square-o" id="settings-icon-transaction" aria-hidden="true"></i>
+                        <p id="settings-icon-transaction-p">Potrošnje</p>
+                    </div>
+                    <div class="settings-divider"></div>
+
+                    <div class="settings">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section></section>
+
+
+    </div>
+
+
+</body>
+
+</html>
