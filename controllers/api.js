@@ -14,13 +14,16 @@ exports.postCreateUser = (req, res, next) => {
 
     var securityToken = cryptoRandomString({ length: 70, type: 'base64' });
     console.log(securityToken);
-    var email = req.body.email;
-    var username = req.body.username;
+    const email = req.body.email;
+    const username = req.body.username;
+    const password = req.body.password;
 
     User.create({
         securityToken: securityToken,
         email: email,
-        username: username
+        password: password,
+        username: username,
+        
     }).then(result => {
         res.status(200).send({
             "message": "Successfully created account!"

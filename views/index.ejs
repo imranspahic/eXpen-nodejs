@@ -1,245 +1,269 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/splash.css">
-    <script src="https://kit.fontawesome.com/6f18e1fdff.js" crossorigin="anonymous"></script>
-    <title><%= pageTitle %></title>
-    <script src="/js/main.js"></script>
-  </head>
-  <body onload="funkcija()">
-    <header id="header">
 
-      <div id="header-back-button">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/splash.css">
+  <script src="https://kit.fontawesome.com/6f18e1fdff.js" crossorigin="anonymous"></script>
+  <title>
+    <%= pageTitle %>
+  </title>
+
+</head>
+
+<body onload="funkcija()">
+  <header id="header">
+
+    <div id="header-back-button">
       <i class="fas fa-arrow-circle-left" id="back-button"></i>
-      </div>
-    
-      <div id="header-slika">
-        <img src="/images/logo_coin.png" alt="Logo">
-      </div>
-      <div id="header-naziv">
-          <p>e<span>X</span>pen</p>
-      </div>
+    </div>
 
-      <div class="header-app">
-        <p id="preuzmi-aplikaciju" <span id="google-play-icon"><i class="fab fa-google-play"></i></span>  Preuzmi aplikaciju</p>
-      </div>
+    <div id="header-slika">
+      <img src="/images/logo_coin.png" alt="Logo">
+    </div>
+    <div id="header-naziv">
+      <p>e<span>X</span>pen</p>
+    </div>
 
-    </header>
+    <div class="header-app">
+      <p id="preuzmi-aplikaciju" <span id="google-play-icon"><i class="fab fa-google-play"></i></span> Preuzmi
+        aplikaciju</p>
+    </div>
 
+  </header>
+  <% if(!hasError) { %>
     <div id="loading-spinner">
       <div class="logo_coin">
         <img src="/images/logo_coin.png" alt="Logo" id="logo_center">
       </div>
-    <div id="c1"> </div>
-    <div id="c2"> </div>
-    <div id="c3"> </div>
+      <div id="c1"> </div>
+      <div id="c2"> </div>
+      <div id="c3"> </div>
 
     </div>
+    <% } %>
 
-    <main>
+      <main>
 
-      <form class="login-form" action="/login-dashboard" method="post" id="login-form">
-        <img src="/images/user-logo.png" alt="User" id="user-logo">
+        <form class="login-form" action="/login-dashboard" method="post" id="login-form">
+          <img src="/images/user-logo.png" alt="User" id="user-logo">
 
-              <div class="username-input">
-                <input type="text" name="Korisnički račun" value="" placeholder="Korisnički račun">
-              </div>
+          <div class="username-input">
+            <input type="text" name="username" value="" placeholder="Korisnički račun" id="username">
+          </div>
 
-              <div class="password-input">
-                <input type="password" name="Šifra" value="" placeholder="Šifra">
-              </div>
+          <div class="password-input">
+            <input type="password" name="password" value="" placeholder="Šifra" id="password">
+          </div>
+          <% if(hasError) { %>
+          <p class="login-error">Netačno korisničko ime ili šifra!</p>
+          <% } %>
 
-              <div class="submit-input">
-                <input type="submit" name="Prijavi se" value="Prijavi se">
-              </div>
-      </form>
+          <div class="submit-input">
+            <input type="submit" name="loginButton" value="Prijavi se">
+          </div>
+        </form>
 
-      <div class="preuzmi-aplikaciju-wrapper" id="paWrapper">
+        <div class="preuzmi-aplikaciju-wrapper" id="paWrapper">
 
-        <!-- HEADER GRID -->
+          <!-- HEADER GRID -->
           <div class="paHEADER">
-              <div class="paHEADER-logo">
-                  <img src="/images/logo_coin.png" alt="Logo">
+            <div class="paHEADER-logo">
+              <img src="/images/logo_coin.png" alt="Logo">
+            </div>
+
+            <div class="paHEADER-naziv">
+              <p> <span> eXpen </span> <br> Imran Spahić </p>
+            </div>
+
+            <div class="paHEADER-alati">
+              <div>
+                <i class="fas fa-tools"></i>
+                <p>Alati</p>
               </div>
-
-              <div class="paHEADER-naziv">
-                  <p> <span> eXpen </span>  <br> Imran Spahić </p>
+              <div>
+                <i class="fas fa-coins"></i>
+                <p>Finansije</p>
               </div>
-
-              <div class="paHEADER-alati">
-                <div>
-                  <i class="fas fa-tools"></i>
-                  <p>Alati</p>
-                </div>
-                <div>
-                  <i class="fas fa-coins"></i>
-                  <p>Finansije</p>
-                </div>
-                <div>
-                  <i class="fas fa-clipboard"></i>
-                  <p>Bilješke</p>
-                </div>
+              <div>
+                <i class="fas fa-clipboard"></i>
+                <p>Bilješke</p>
               </div>
+            </div>
 
-              <div class="paHEADER-preuzmi">
-              <a href="https://drive.google.com/file/d/1K-0_8UG0aSTqHrQo6uqiGSFIp2Xn-BMH/view?usp=sharing"><button id="preuzmi-dugme" type="button" name="Preuzmi">Preuzmi</button></a>
+            <div class="paHEADER-preuzmi">
+              <a href="https://drive.google.com/file/d/1K-0_8UG0aSTqHrQo6uqiGSFIp2Xn-BMH/view?usp=sharing"><button
+                  id="preuzmi-dugme" type="button" name="Preuzmi">Preuzmi</button></a>
+            </div>
+
+          </div>
+
+          <hr id="preuzmi-hr">
+
+          <div class="paMAIN">
+
+            <div class="paMAIN-screenshots">
+              <div id='img1'>
+                <img src="/images/s1.png" alt="">
               </div>
+              <div id='img2'>
+                <img src="/images/s2.png" alt="">
+              </div>
+              <div id='img3'>
+                <img src="/images/s3.png" alt="">
+              </div>
+              <div id='img4'>
+                <img src="/images/s4.png" alt="">
+              </div>
+              <div id='img5'>
+                <img src="/images/s5.png" alt="">
+              </div>
+              <div id='img6'>
+                <img src="/images/s6.png" alt="">
+              </div>
+              <div id='img7'>
+                <img src="/images/s7.png" alt="">
+              </div>
+              <div id='img8'>
+                <img src="/images/s8.png" alt="">
+              </div>
+              <div id='img1'>
+                <img src="/images/s1.png" alt="">
+              </div>
+              <div id='img2'>
+                <img src="/images/s2.png" alt="">
+              </div>
+              <div id='img3'>
+                <img src="/images/s3.png" alt="">
+              </div>
+              <div id='img4'>
+                <img src="/images/s4.png" alt="">
+              </div>
+              <div id='img5'>
+                <img src="/images/s5.png" alt="">
+              </div>
+              <div id='img6'>
+                <img src="/images/s6.png" alt="">
+              </div>
+            </div>
 
-          </div>
+            <div class="paMAIN-opis">
+              <h2>Opis</h2>
+              <p>eXpen je aplikacija koja prati trošak na dnevnoj, mjesečnoj i godišnjoj bazi. Sa raznim opcijama poput
+                dodavanja kategorija i sortiranja potrošnji u specifične potkategorije uz elegantan dizajn dobivate
+                jednostavan prikaz stanja, prihoda rashoda po mjesecima uz grafove, pdf dokument, tabele i drugo. Ovo je
+                <span>BETA</span> verzija i aplikacija je u razvoju, nove mogućnosti će biti dodane a stare poboljšane.
+                Aplikacija može imati tehničkih i programskih grešaka...</p>
+            </div>
+            <div class="paMAIN-mogućnosti">
+              <h2>Mogućnosti</h2>
+              <li>Dodavanje kategorija i potkategorija</li>
+              <li>Praćenje potrošnji po mjesecima</li>
+              <li>Dodavanje mjesečnog rashoda</li>
+              <li>Prikaz stanja po mjesecima</li>
+              <li>Spremanje podataka u excel ili pdf dokument</li>
+              <li>Postavljanje šifre i zaštita aplikacije i podataka</li>
+              <li>Grafovi potrošnje, detalji kategorija i potkategorija</li>
+              <li>Generalni rashod po mjesecima i generalni prikaz</li>
 
-        <hr id="preuzmi-hr">
-
-        <div class="paMAIN">
-
-          <div class="paMAIN-screenshots">
-            <div id='img1'>
-              <img src="/images/s1.png" alt="">
-            </div>
-            <div id='img2'>
-              <img src="/images/s2.png" alt="">
-            </div>
-            <div id='img3'>
-              <img src="/images/s3.png" alt="">
-            </div>
-            <div id='img4'>
-              <img src="/images/s4.png" alt="">
-            </div>
-            <div id='img5'>
-              <img src="/images/s5.png" alt="">
-            </div>
-            <div id='img6'>
-              <img src="/images/s6.png" alt="">
-            </div>
-            <div id='img7'>
-              <img src="/images/s7.png" alt="">
-            </div>
-            <div id='img8'>
-              <img src="/images/s8.png" alt="">
-            </div>
-            <div id='img1'>
-              <img src="/images/s1.png" alt="">
-            </div>
-            <div id='img2'>
-              <img src="/images/s2.png" alt="">
-            </div>
-            <div id='img3'>
-              <img src="/images/s3.png" alt="">
-            </div>
-            <div id='img4'>
-              <img src="/images/s4.png" alt="">
-            </div>
-            <div id='img5'>
-              <img src="/images/s5.png" alt="">
-            </div>
-            <div id='img6'>
-              <img src="/images/s6.png" alt="">
-            </div>
-          </div>
-
-          <div class="paMAIN-opis">
-            <h2>Opis</h2>
-            <p>eXpen je aplikacija koja prati trošak na dnevnoj, mjesečnoj i godišnjoj bazi. Sa raznim opcijama poput dodavanja kategorija i sortiranja potrošnji u specifične potkategorije uz elegantan dizajn dobivate jednostavan prikaz stanja, prihoda rashoda po mjesecima uz grafove, pdf dokument, tabele i drugo. Ovo je <span>BETA</span>  verzija i aplikacija je u razvoju, nove mogućnosti će biti dodane a stare poboljšane. Aplikacija može imati tehničkih i programskih grešaka...</p>
-          </div>
-          <div class="paMAIN-mogućnosti">
-            <h2>Mogućnosti</h2>
-            <li>Dodavanje kategorija i potkategorija</li>
-            <li>Praćenje potrošnji po mjesecima</li>
-            <li>Dodavanje mjesečnog rashoda</li>
-            <li>Prikaz stanja po mjesecima</li>
-            <li>Spremanje podataka u excel ili pdf dokument</li>
-            <li>Postavljanje šifre i zaštita aplikacije i podataka</li>
-            <li>Grafovi potrošnje, detalji kategorija i potkategorija</li>
-            <li>Generalni rashod po mjesecima i generalni prikaz</li>
-
-          </div>
-          <div >
-            <hr id="preuzmi-hr-footer">
-          </div>
-
-          <div class="paMAIN-footer">
-            <div>
-              <p>Verzija: <span>1.0.0</span> </p>
             </div>
             <div>
-              <p>Veličina: <span> 35 MB</span></p>
+              <hr id="preuzmi-hr-footer">
             </div>
-            <div>
-              <p>E-mail: <span>imranspahic300@gmail.com</span> </p>
+
+            <div class="paMAIN-footer">
+              <div>
+                <p>Verzija: <span>1.0.0</span> </p>
+              </div>
+              <div>
+                <p>Veličina: <span> 35 MB</span></p>
+              </div>
+              <div>
+                <p>E-mail: <span>imranspahic300@gmail.com</span> </p>
+              </div>
             </div>
+
+
           </div>
 
 
         </div>
+      </main>
+      <script type="text/javascript">
 
+        var header = document.getElementById('header');
+        var c3 = document.getElementById('c3');
+        var c2 = document.getElementById('c2');
+        var c1 = document.getElementById('c1');
+        var logo_center = document.getElementById('logo_center');
+        var loginForm = document.getElementById('login-form');
+        var userLogo = document.getElementById('user-logo');
+        var preuzmiAplikaciju = document.getElementById('preuzmi-aplikaciju');
+        var preuzmiAplikacijuBody = document.getElementById('paWrapper');
+        var headerBackButton = document.getElementById('header-back-button');
+        var iconBackButton = document.getElementById('back-button');
 
-      </div>
-    </main>
-    <script type="text/javascript">
-    var header = document.getElementById('header');
-    var c3 = document.getElementById('c3');
-    var c2 = document.getElementById('c2');
-    var c1 = document.getElementById('c1');
-    var logo_center = document.getElementById('logo_center');
-    var loginForm = document.getElementById('login-form');
-    var userLogo = document.getElementById('user-logo');
-    var preuzmiAplikaciju = document.getElementById('preuzmi-aplikaciju');
-    var preuzmiAplikacijuBody = document.getElementById('paWrapper');
-    var headerBackButton = document.getElementById('header-back-button');
-    var iconBackButton = document.getElementById('back-button');
+        preuzmiAplikaciju.addEventListener('click', function () {
+          loginForm.style.animation = 'fadeOut 1s 1';
 
-    preuzmiAplikaciju.addEventListener('click', function() {
-      loginForm.style.animation = 'fadeOut 1s 1';
+          setTimeout(function () {
+            loginForm.style.display = 'none';
+            preuzmiAplikacijuBody.style.display = 'block';
+            preuzmiAplikacijuBody.style.animation = 'fadeIn 2s 1';
+          }, 1000);
+          preuzmiAplikaciju.style.color = 'blue';
+          headerBackButton.style.display = 'inline-block';
+          headerBackButton.style.animation = 'slide-right 1s 1';
+        });
 
-      setTimeout(function() {
-      loginForm.style.display = 'none';
-      preuzmiAplikacijuBody.style.display = 'block';
-      preuzmiAplikacijuBody.style.animation = 'fadeIn 2s 1';
-    }, 1000);
-      preuzmiAplikaciju.style.color = 'blue';
-      headerBackButton.style.display = 'inline-block';
-      headerBackButton.style.animation ='slide-right 1s 1';
-    });
+        iconBackButton.addEventListener('click', function () {
+          headerBackButton.style.animation = 'slide-left 1s 1';
+          preuzmiAplikacijuBody.style.animation = 'fadeOut 1s 1';
+          preuzmiAplikaciju.style.color = 'var(--ljubicastaBojaGlavna)';
+          setTimeout(function () {
+            headerBackButton.style.display = 'none';
+            preuzmiAplikacijuBody.style.display = 'none';
+            loginForm.style.display = 'block';
+            loginForm.style.animation = 'fadeIn 2s 1';
+          }, 1000)
+        })
 
-    iconBackButton.addEventListener('click', function() {
-      headerBackButton.style.animation = 'slide-left 1s 1';
-      preuzmiAplikacijuBody.style.animation = 'fadeOut 1s 1';
-      preuzmiAplikaciju.style.color ='var(--ljubicastaBojaGlavna)';
-      setTimeout(function() {
-        headerBackButton.style.display = 'none';
-        preuzmiAplikacijuBody.style.display = 'none';
-        loginForm.style.display = 'block';
-        loginForm.style.animation = 'fadeIn 2s 1';
-      }, 1000)
-    })
+        function funkcija() {
+          var data = '<%- JSON.stringify(hasError) %>';
+          var hasError = JSON.parse(data);
+          if (hasError) {
+            header.style.display = 'flex';
+            loginForm.style.display = 'block';
+            userLogo.style.display = 'inline-block';
+            return;
+          }
+          setTimeout(setPocetni, 3000);
 
-    function funkcija() {
-      setTimeout(setPocetni, 3000);
-    }
+        }
 
-    function setPocetni() {
+        function setPocetni() {
+          console.log("pocetni postavljanje");
+          header.style.display = 'flex';
+          header.style.animation = 'fadeIn 2s 1';
+          c3.style.animation = 'splash-horizontal 1.3s 1';
+          logo_center.style.animation = 'logo_move 1s 1';
+          loginForm.style.display = 'block';
+          loginForm.style.animation = 'fadeIn 3s 1';
+          userLogo.style.display = 'inline-block';
+          userLogo.style.animation = 'fadeIn 3s 1';
 
-      header.style.display = 'flex';
-      header.style.animation = 'fadeIn 2s 1';
-      c3.style.animation = 'splash-horizontal 1.3s 1';
-      logo_center.style.animation = 'logo_move 1s 1';
-      loginForm.style.display='block';
-      loginForm.style.animation = 'fadeIn 3s 1';
-      userLogo.style.display = 'inline-block';
-      userLogo.style.animation = 'fadeIn 3s 1';
+          setTimeout(function () { c3.style.display = 'none' }, 1300);
+          c2.style.animation = 'splash-horizontal 1.3s 0.1s 1';
+          setTimeout(function () { c2.style.display = 'none' }, 1400);
+          c1.style.animation = 'splash-horizontal 1.3s 0.1s 1';
+          setTimeout(function () { c1.style.display = 'none' }, 1400);
+          setTimeout(function () { logo_center.style.display = 'none' }, 1000);
 
-      setTimeout(function() {c3.style.display = 'none'}, 1300);
-      c2.style.animation = 'splash-horizontal 1.3s 0.1s 1';
-      setTimeout(function() {c2.style.display = 'none'}, 1400);
-      c1.style.animation = 'splash-horizontal 1.3s 0.1s 1';
-      setTimeout(function() {c1.style.display = 'none'}, 1400);
-      setTimeout(function() {logo_center.style.display = 'none'}, 1000);
+        }
 
+      </script>
 
-
-    }
-
-    </script>
-  </body>
+      <script src="/js/main.js"></script>
+</body>
 
 </html>
