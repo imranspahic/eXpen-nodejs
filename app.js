@@ -16,6 +16,7 @@ const loginRoutes = require('./routes/login');
 const apiRoutes = require('./routes/api');
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(loginRoutes);

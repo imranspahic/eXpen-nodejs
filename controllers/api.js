@@ -6,6 +6,9 @@ const User = require('../models/user');
 
 exports.postCreateUser = (req, res, next) => {
 
+    console.log("REQUEST ? = = = = ="  + JSON.stringify(req.body, null, 2));
+    console.log("REQEST 2 _ _ _ " + req.body);
+
     if (req.body.applicationToken != applicationToken) {
         res.status(420).send({
             "message": "Application Token is invalid"
