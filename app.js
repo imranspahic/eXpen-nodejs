@@ -23,7 +23,7 @@ app.use(loginRoutes);
 
 app.use(apiRoutes);
 
-sequelize.sync().then(
+sequelize.sync({force: true}).then(
     result => {
         app.listen(4000);
     }

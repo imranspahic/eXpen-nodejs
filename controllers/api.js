@@ -15,26 +15,34 @@ exports.postCreateUser = (req, res, next) => {
         });
     }
 
-    var securityToken = cryptoRandomString({ length: 70, type: 'base64' });
-    console.log(securityToken);
+
+    var accessToken = cryptoRandomString({ length: 70, type: 'base64' });
+    console.log(accessToken);
     const email = req.body.email;
     const username = req.body.username;
     const password = req.body.password;
+    const dateCreated = new Date();
+
+    console.log("date create" + dateCreated);
 
     User.create({
-        securityToken: securityToken,
+        accessToken: accessToken,
         email: email,
         password: password,
         username: username,
         
     }).then(result => {
         res.status(200).send({
-            "message": "Successfully created account!"
+            "message": "Successfully created account!",
+            "accessToken": accessToken,
+            "dateCreated": dateCreated,
+            "email": email,
+            "username": username
         })
     }).catch(err => {
         console.log(err);
         res.status(500).send({
-            "message": "An error occured while trying to create username into database!"
+            "message": "An error occured while trying to create user!"
         });
     });
 };

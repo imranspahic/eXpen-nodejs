@@ -10,7 +10,7 @@ const User = sequelize.define('user', {
         autoIncrement: true,
     },
 
-    securityToken: {
+    accessToken: {
         type: Sequelize.STRING,
         allowNull: false,
     },
